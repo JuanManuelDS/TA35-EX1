@@ -1,0 +1,20 @@
+<h2 class="mt-4">Listado clientes</h2>
+<hr />
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Cliente</th>
+      <th scope="col">CIF</th>
+      <th scope="col">Direccion</th>
+      <th scope="col">Grupo</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let cliente of (clientes ? clientes : [])">
+      <th scope="row">{{ cliente.nombre }}</th>
+      <td>{{ cliente.cif }}</td>
+      <td>{{ cliente.direccion }}</td>
+      <td>{{ cliente.grupo }}</td>
+    </tr>
+  </tbody>
+</table>
